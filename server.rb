@@ -1,55 +1,57 @@
 
 require "sinatra"
 
-# class Pastry  
-# 	def initialize(description, item)
-# 		@description = description
-# 		@item = item
-# 	end
-# end	
+Dir[settings.root + "/classes/*.rb"].each{|file| require file}
 
-class Cake
-	def initialize(description,item)
-		@description = description
-		@item = item
-	end
+before do
+	# @user = User.new
+	# @user.username = "guest"
+	@muffin = Muffin.new("bluberry", 3.99)	
+	@cake = Cake.new("chocolate", 13.99)
+	@cookie =  Cookie.new("peanut butter", 2.50)
 end
 
-class Cookies
-	def initialize(description,item)
-	    @description = description
-		@item = item	
-	end
+
+before do
+	@user = User.new
+	@user.username = "guest"
 end
 
-class Muffins
-	def initialize(description, item)
-		@description = description
-		@item = item
-	end
+
+before do	
+	@muffin = Muffin.new("bluberry", 3.99)	
 end
 
-@peanut_butter_cookie = Cookies.new("Peanut Butter",2)
+
+before do
+	@cake = Cake.new("chocolate", 13.99)	
+end
+
+
+before do
+	@cookie =  Cookie.new("peanut butter", 2.50)
+end
+
 
 get('/')  do
-	# "I'm alive!"
+	"I'm alive!"
    erb :index
 end
 
-
 get('/cakes')  do
-	"I'm cakes!"
-	erb :cakes
+	"I got #{@cake.description} by the pound!"
+	
 end
-
-
 get('/cookies')  do
-	"I'm a #{@peanut_butter_cookie}"
+	"God, I want a #{@cookie.description}, so bad."
 end
-
 
 get('/muffins')  do
-	"I'm muffins!"
+	"I am the muthafuckin #{@muffin.description} Man!"
+end
+
+get('/username')  do
+	"Username: #{@user}"
 end
 
 
