@@ -22,6 +22,23 @@ class Muffin
 	end
 end
 
+# class Shopping_cart
+# 	attr_accessor :
+# 	def initialize(array)
+# 		@array = array
+# 	end
+
+# 	def add_to_cart	
+# 	end
+
+# 	def subtract_from_cart
+# 	end
+# end
+
+
+
+
+
 
 class User
 	attr_accessor :username

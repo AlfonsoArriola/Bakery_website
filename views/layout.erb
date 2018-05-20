@@ -2,16 +2,114 @@
 <head>
 	<meta charset="UTF-8">
 	<title> Bake Shop</title>
-	<!-- <link rel="stylesheet" href="/style.css"> -->
-	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css"> -->
+	<link rel="stylesheet" href="/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
 </head>
 <body>
 
 
-    <%= @peanut_butter_cookie %>
+  <div class="container">
+  	<div class="row">
+
+ 
+    <div class="col s12 m4">
+      <div class="card #5d4037 brown darken-2">
+        <div class="card-content white-text">
+          <span class="card-title">
+          	<%= @chocolate_cake.description %>
+          	<%= @blue_berry_muffin.description %>
+          	<%= @oatmeal_raisin_cookie.description %>
+           </span>
+          <p>I am a very simple card. I am good at containing small bits of information.
+          I am convenient because I require little markup to use effectively.</p>
+        </div>
+        <div class="card-action">
+          <a href="#">This is a link</a>
+          <a href="#">This is a link</a>
+        </div>
+      </div>
+    </div>
+ 
+
+  
+    <div class="col s12 m4">
+      <div class="card #5d4037 brown darken-2">
+        <div class="card-content white-text">
+          <span class="card-title">
+          	<%= @vanilla_cake.description %>
+          	<%= @chocolate_chip_muffin.description %>
+          	<%= @sandwich_cookie.description %>
+          </span>
+          <p>I am a very simple card. I am good at containing small bits of information.
+          I am convenient because I require little markup to use effectively.</p>
+        </div>
+        <div class="card-action">
+          <a href="#">This is a link</a>
+          <a href="#">This is a link</a>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="col s12 m4">
+      <div class="card #5d4037 brown darken-2">
+        <div class="card-content white-text">
+          <span class="card-title">
+          	<%= @carrot_cake.description %>
+          	<%= @apple_cinnamon_muffin.description %>
+          	<%= @oatmeal_raisin_cookie.description %>
+          </span>
+          <p>I am a very simple card. I am good at containing small bits of information.
+          I am convenient because I require little markup to use effectively.</p>
+        </div>
+        <div class="card-action">
+          <a href="#">This is a link</a>
+          <a href="#">This is a link</a>
+        </div>
+      </div>
+    </div>
+  		
+  	</div>
+       
+  </div>
+
+
+
+
+
+
+   
     <%= yield %>
 
-<!-- 	<script type="text/javascript" src="/main.js"> </script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script> -->
+      <footer class="page-footer  #5d4037 brown darken-2">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text"> The Sweet Spots. </h5>
+                <p class="grey-text text-lighten-4"> Your guide to good food:</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text"> On The Menu </h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="/cakes">Cakes</a></li>
+                  <li><a class="grey-text text-lighten-3" href="/muffins">Muffins</a></li>
+                  <li><a class="grey-text text-lighten-3" href="/cookies">Cookies</a></li>
+                 
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2014 alfonso arriola
+            <a class="grey-text text-lighten-4 right" href="https://github.com/AlfonsoArriola">Code is Life.</a>
+            </div>
+          </div>
+        </footer>
+            
+
+	<script type="text/javascript" src="/main.js"> </script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 </body>
 </html>
