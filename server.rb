@@ -15,7 +15,7 @@ before do
 end
 
 before do	
-	@chocolate_chip_muffin = Muffin.new("chocolate Chip Cookie", 2.50)	
+	@chocolate_chip_muffin = Muffin.new("Chocolate Chip Cookie", 2.50)	
 end
 
 before do	
@@ -53,7 +53,8 @@ end
 
 get('/')  do
 	"I'm alive!"
-   erb :index
+   # erb :index
+   erb :index, :layout =>false
 end
 
 get('/cakes')  do
