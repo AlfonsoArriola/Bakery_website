@@ -37,15 +37,15 @@ end
 
 
 before do
-	@oatmeal_raisin_cookie =  Cookie.new("Peanut Butter Cookie", 2.50)
+	@pb_cookie = Cookie.new("Peanut Butter", 2.50)
 end
 
 before do
-	@chocolate_mint_cookie =  Cookie.new("Chocolate Mint Cookie", 2.50)
+	@chocolate_mint_cookie =  Cookie.new("Thin Mint", 2.50)
 end
 
 before do
-	@sandwich_cookie =  Cookie.new("Sandwich Cookie", 2.50)
+	@sandwich_cookie =  Cookie.new("Alfajor", 2.50)
 end
 
 
@@ -58,23 +58,62 @@ get('/')  do
 end
 
 get('/cakes')  do
-	"I got #{@carrot_cake.description} by the pound!"
+	
+	  @billboard_title ="Cakes"
+	
 	erb :cakes
 	
 end
 get('/cookies')  do
-	"God, I want a #{@sandwich_cookie.description}, so bad."
+	@billboard_title  ="Cookies"
+	
 	erb :cookies
 end
 
 get('/muffins')  do
-	"I am the muthafuckin #{@apple_cinnamon_muffin.description} Man!"
+	@billboard_title ="Muffins"
+	
 	erb :muffins
 end
 
-get('/username')  do
-	"Username: #{@user}"
+get('/contact')  do
+	@billboard_title ="Contact"
+	
+	erb :contact
 end
+
+post('/contact')  do
+	@billboard_title ="Contact"
+
+	mg_client = Mailgun::Client.new(ENV['MAILGUN_API_KEY'])
+
+	message_params =  {
+			                from: 'alfonsoarriolajr@gmail.com',
+		                    to:   'alfonsoarriolajr@gmail.com',
+		                    subject: 'The Ruby SDK is awwww!',
+		                    text:    'Gang, gang!'
+		                  }
+
+
+   mg_client.send_message(ENV['MAILGUN_API_DOMAIN'], message_params)
+
+
+   redirect '/'
+	
+	erb :contact
+end
+
+get('/thank_you')  do
+	@billboard_title ="Contact"
+	
+	erb :thank_you
+end
+
+
+
+# get('/username')  do
+# 	"Username: #{@user}"
+# end
 
 
 	

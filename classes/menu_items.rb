@@ -3,7 +3,17 @@ class Cake
 	def initialize(description, price)	
 		@description = description
 		@price = price
+		@cake_bundle = []
 	end
+
+	def add_to_cart
+		@cake_bundle.push	
+	end
+
+	def subtract_from_cart
+		@cake_bundle.pop
+	end
+
 end
 
 class Cookie

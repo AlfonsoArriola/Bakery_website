@@ -3,10 +3,68 @@
     min-height: 100vh;
     flex-direction: column;
     background: #3e2723;
+    font-family: 'Muli', sans-serif;
   }
 
   main {
     flex: 1 0 auto;
   }
-      
-  
+
+
+.billboard{
+	height:30rem;
+	background-image: url("images/white_ribbon.jpg");
+	background-size: cover;
+    background-repeat: no-repeat;
+    border-top:  4px solid white;
+    border-left : 4px solid white;
+    border-right : 4px solid white;
+
+
+}
+
+.billboard h2{
+	text-align: center;
+	font-size: 10em;
+	padding-top: 10rem;
+	font-family: 'Spicy+Rice', cursive;
+	color: brown;
+	text-shadow: 1px 1px black;
+
+
+}
+
+.card_image{
+  	max-width: 100%;
+  	max-height: auto;   
+}
+
+.nav-wrapper{
+	padding-left: 3.8rem;
+}
+
+.go_logo {
+	float: right;
+	font-family: 'Modak', cursive;
+	font-size: 2.6em;
+	padding-right: 3rem;
+}
+
+.go_logo a{
+    color: #552B00;
+    text-shadow: 1px 1px white;
+}
+
+.food_display{
+	margin-top:6rem;
+}
+
+.card_image{
+	border: 2px solid #00acc1;
+}
+
+footer{
+	margin-top: 10rem;
+}
+
+

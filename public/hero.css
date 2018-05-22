@@ -1,9 +1,10 @@
 body{
 	background: grey;
+    margin: 0 auto;
 }
 
 video {
-    width: 100%    !important;
+    width: 100vw    !important;
     height: auto   !important;
     z-index: 0;
 }
@@ -13,10 +14,10 @@ video {
     position: absolute !important;
     top:50px;
     left: 30px;
-    font-family: 'PT+Serif', cursive;
+    font-family:
     z-index: 1;
-    color: black;
-    text-shadow: 2px 2px white;
+    color: #00acc1;
+    text-shadow: 2px 2px brown;
     font-size: 2.2em;
     padding-left: 3rem;
    }
@@ -29,4 +30,34 @@ video {
 
 ul {
   list-style-type: none;
+ 
 }
+
+}
+li{
+  padding-left: 5rem;
+ }
+
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+

@@ -6,11 +6,12 @@
 <body>
 
 	<div class="container">
-  	<div class="row">
+  	<div class="row food_display">
  
     <div class="col s12 m4">
       <div class="card #5d4037 brown darken-2">
         <div class="card-content white-text">
+          <img  class="card_image" src="/images/mint_cookies.jpg" alt="Chocolate_Mint_Cookie">
           <span class="card-title">
           	
           	<%= @chocolate_mint_cookie.description %>
@@ -27,6 +28,7 @@
     <div class="col s12 m4">
       <div class="card #5d4037 brown darken-2">
         <div class="card-content white-text">
+          <img  class="card_image" src="/images/sandwich_cookies.jpg" alt="Sandwich_Cookie">
           <span class="card-title">
           
           	<%= @sandwich_cookie.description %>
@@ -43,15 +45,16 @@
     <div class="col s12 m4">
       <div class="card #5d4037 brown darken-2">
         <div class="card-content white-text">
+          <img  class="card_image" src="/images/pb_cookies.jpg" alt="Peanut_Butter_Cookie">
           <span class="card-title">
           	
-          	<%= @oatmeal_raisin_cookie.description %>
+          	<%= @pb_cookie.description %>
           </span>
           <p>I am a very simple card. I am good at containing small bits of information.
           I am convenient because I require little markup to use effectively.</p>
         </div>
         <div class="card-action">
-          $<%= @oatmeal_raisin_cookie.price %>
+          $<%= @pb_cookie.price %>
 
         </div>
       </div>

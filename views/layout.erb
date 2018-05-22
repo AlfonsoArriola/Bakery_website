@@ -4,82 +4,37 @@
 	<title> Bake Shop</title>
 	<link rel="stylesheet" href="/style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Modak|PT+Serif|Spicy+Rice" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Modak|Muli|Spicy+Rice" rel="stylesheet">
 </head>
 <body>
 
 
-  <!-- <div class="container">
-  	<div class="row">
- 
-    <div class="col s12 m4">
-      <div class="card #5d4037 brown darken-2">
-        <div class="card-content white-text">
-          <span class="card-title">
-          	<%= @chocolate_cake.description %>
-          	<%= @blue_berry_muffin.description %>
-          	<%= @oatmeal_raisin_cookie.description %>
-           </span>
-          <p>I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.</p>
-        </div>
-        <div class="card-action">
-          <a href="#">This is a link</a>
-          <a href="#">This is a link</a>
-        </div>
-      </div>
-    </div>
- 
-    <div class="col s12 m4">
-      <div class="card #5d4037 brown darken-2">
-        <div class="card-content white-text">
-          <span class="card-title">
-          	<%= @vanilla_cake.description %>
-          	<%= @chocolate_chip_muffin.description %>
-          	<%= @sandwich_cookie.description %>
-          </span>
-          <p>I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.</p>
-        </div>
-        <div class="card-action">
-          <a href="#">This is a link</a>
-          <a href="#">This is a link</a>
-        </div>
-      </div>
-    </div>
+  
 
-    <div class="col s12 m4">
-      <div class="card #5d4037 brown darken-2">
-        <div class="card-content white-text">
-          <span class="card-title">
-          	<%= @carrot_cake.description %>
-          	<%= @apple_cinnamon_muffin.description %>
-          	<%= @oatmeal_raisin_cookie.description %>
-          </span>
-          <p>I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.</p>
-        </div>
-        <div class="card-action">
-          <a href="#">This is a link</a>
-          <a href="#">This is a link</a>
-        </div>
-      </div>
+
+ <div class="container">
+    <div class="billboard">
+        <h2><%=@billboard_title  %></h2>  
+   
     </div>
-  		
-  	</div>    
-  </div> -->
+       
+ </div>
 
 
 
 
  <nav>
     <div class="nav-wrapper #00acc1 cyan darken-1">
-      <a href="/" class="brand-logo right">The Sweet Spot</a>
+      <div class="go_logo">
+        <a href="/" >The Sweet Spot</a>
+      </div>
+      
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul id="nav-mobile" class="left hide-on-med-and-down">
         <li><a href="/muffins"> <img src="images/muff1.png" alt="muffin"> Muffins </a></li>
         <li><a href="/cookies"><img src="images/cookie1.png" alt="cookie"> Cookies</a></li>
         <li><a href="/cakes"> <img src="images/cake2.png" alt="cake"> Cakes </a></li>
+        <li><a href="/cakes"> <img src="" alt="cake"> Contact </a></li>
       </ul>
     </div>
   </nav>
@@ -122,8 +77,8 @@
           </div>
         </footer>
             
-
-	<script type="text/javascript" src="/main.js"> </script>
+<!-- 
+	<script type="text/javascript" src="/main.js"> </script> -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 </body>
 </html>

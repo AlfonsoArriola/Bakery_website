@@ -5,34 +5,43 @@
 </head>
 <body>
 
+
+
+
+ 
+
     <div class="container">
-  	<div class="row">
+  	<div class="row food_display">
  
     <div class="col s12 m4">
       <div class="card #5d4037 brown darken-2">
         <div class="card-content white-text">
+          <img  class="card_image" src="/images/ch_cake.jpg" alt="Chocolate_cake">
           <span class="card-title">
           	<%= @chocolate_cake.description %>
           	
            </span>
-          <p>I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.</p>
+          
         </div>
         <div class="card-action">
           $<%= @chocolate_cake.price %>
         </div>
+        <!-- <div class="card-action">
+         <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+         <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">sub</i></a>
+        </div> -->
       </div>
     </div>
  
     <div class="col s12 m4">
       <div class="card #5d4037 brown darken-2">
         <div class="card-content white-text">
+          <img  class="card_image" src="/images/v_cake.jpg" alt="Vanilla_cake">
           <span class="card-title">
           	<%= @vanilla_cake.description %>
           	
           </span>
-          <p>I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.</p>
+       
         </div>
         <div class="card-action">
           $<%= @vanilla_cake.price %>
@@ -44,12 +53,12 @@
     <div class="col s12 m4">
       <div class="card #5d4037 brown darken-2">
         <div class="card-content white-text">
+          <img  class="card_image" src="/images/carrot_cake.jpg" alt="Carrot_cake">
           <span class="card-title">
           	<%= @carrot_cake.description %>
           
           </span>
-          <p>I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.</p>
+        
         </div>
         <div class="card-action">
         	$<%= @carrot_cake.price %>
