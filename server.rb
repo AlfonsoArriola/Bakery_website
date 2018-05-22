@@ -82,7 +82,7 @@ get('/contact')  do
 	erb :contact
 end
 
-post('/contact')  do
+post('/flyer')  do
 	@billboard_title ="Contact"
 
 	mg_client = Mailgun::Client.new(ENV['MAILGUN_API_KEY'])
@@ -98,13 +98,13 @@ post('/contact')  do
    mg_client.send_message(ENV['MAILGUN_API_DOMAIN'], message_params)
 
 
-   redirect '/'
+   redirect '/thank_you'
 	
-	erb :contact
+	# erb :contact
 end
 
 get('/thank_you')  do
-	@billboard_title ="Contact"
+	@billboard_title ="Success!"
 	
 	erb :thank_you
 end

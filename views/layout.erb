@@ -14,7 +14,7 @@
 
  <div class="container">
     <div class="billboard">
-        <h2><%=@billboard_title  %></h2>  
+        <h2> <%=@billboard_title  %></h2>  
    
     </div>
        
@@ -22,31 +22,33 @@
 
 
 
+<nav class="lil_nav" role='navigation'>
+    <a href="#" id="toggle">=</a>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Clients</a></li>
+    <li><a href="#">Contact Us</a></li>
+  </ul>
+</nav>
 
- <nav>
+ <nav class="big_nav">
     <div class="nav-wrapper #00acc1 cyan darken-1">
       <div class="go_logo">
         <a href="/" >The Sweet Spot</a>
       </div>
-      
-      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-      <ul id="nav-mobile" class="left hide-on-med-and-down">
-        <li><a href="/muffins"> <img src="images/muff1.png" alt="muffin"> Muffins </a></li>
-        <li><a href="/cookies"><img src="images/cookie1.png" alt="cookie"> Cookies</a></li>
-        <li><a href="/cakes"> <img src="images/cake2.png" alt="cake"> Cakes </a></li>
-        <li><a href="/cakes"> <img src="" alt="cake"> Contact </a></li>
+      <ul  class="hot_wire">
+        <li><a href="/muffins"> <img class="icons" src="images/muff1.png" alt="muffin"> Muffins </a></li>
+        <li><a href="/cookies"><img class="icons" src="images/cookie1.png" alt="cookie"> Cookies</a></li>
+        <li><a href="/cakes"> <img  class="icons" src="images/cake2.png" alt="cake"> Cakes </a></li>
+        <li><a href="/contact"> <img class="icons" src="images/b_heart.png" alt=""> Contact </a></li>
       </ul>
     </div>
   </nav>
         
 
 
-          <ul class="sidenav" id="mobile-demo">
-    <li><a href="sass.html">Sass</a></li>
-    <li><a href="badges.html">Components</a></li>
-    <li><a href="collapsible.html">Javascript</a></li>
-    <li><a href="mobile.html">Mobile</a></li>
-  </ul>
+
 
    
     <%= yield %>
@@ -55,8 +57,8 @@
           <div class="container">
             <div class="row">
               <div class="col l6 s12">
-                <h5 class="white-text"> The Sweet Spots. </h5>
-                <p class="grey-text text-lighten-4"> Your guide to good food:</p>
+                <h5 class="white-text"> The Sweet Spot </h5>
+                
               </div>
               <div class="col l4 offset-l2 s12">
                 <h5 class="white-text"> On The Menu </h5>
