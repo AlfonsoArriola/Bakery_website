@@ -1,5 +1,8 @@
 
 require "sinatra"
+require 'mailgun'
+
+
 
 Dir[settings.root + "/classes/*.rb"].each{|file| require file}
 
@@ -37,15 +40,15 @@ end
 
 
 before do
-	@pb_cookie = Cookie.new("Peanut Butter", 2.50)
+	@pb_cookie = Cookie.new("Peanut Butter", 2.75)
 end
 
 before do
-	@chocolate_mint_cookie =  Cookie.new("Thin Mint", 2.50)
+	@chocolate_mint_cookie =  Cookie.new("Thin Mint", 2.75)
 end
 
 before do
-	@sandwich_cookie =  Cookie.new("Alfajor", 2.50)
+	@sandwich_cookie =  Cookie.new("Alfajor", 2.75)
 end
 
 
@@ -85,13 +88,40 @@ end
 post('/flyer')  do
 	@billboard_title ="Contact"
 
+	p params
+
+	@f_name = params[:first_name]
+	l_name = params[:last_name]
+	e_mail = params[:e_mail]
+
 	mg_client = Mailgun::Client.new(ENV['MAILGUN_API_KEY'])
+
+	# let request = require('request');
+
+	# let file = request("https://media.giphy.com/media/l0HUg6Ypas42ubkXu/giphy.gif");
 
 	message_params =  {
 			                from: 'alfonsoarriolajr@gmail.com',
-		                    to:   'alfonsoarriolajr@gmail.com',
-		                    subject: 'The Ruby SDK is awwww!',
-		                    text:    'Gang, gang!'
+		                    to:   "#{e_mail}",
+		                    subject: 'Do You Smell What The Sweet Spot is Baking?!',
+
+		                      html:  '<h1>  Puttin The Smack Down On Pastries  </h1>
+
+                                  Please check out our fine goods below <br>
+
+
+                                  <link rel="stylesheet" href="/" />
+
+                                
+
+                                 
+
+
+
+
+		                      '
+		                     
+
 		                  }
 
 
@@ -99,12 +129,15 @@ post('/flyer')  do
 
 
    redirect '/thank_you'
+   
+
 	
 	# erb :contact
 end
 
 get('/thank_you')  do
 	@billboard_title ="Success!"
+	
 	
 	erb :thank_you
 end
