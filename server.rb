@@ -1,7 +1,5 @@
-
 require "sinatra"
 require 'mailgun'
-
 
 
 Dir[settings.root + "/classes/*.rb"].each{|file| require file}
@@ -56,32 +54,26 @@ end
 
 get('/')  do
 	"I'm alive!"
-   # erb :index
    erb :index, :layout =>false
 end
 
 get('/cakes')  do
-	
-	  @billboard_title ="Cakes"
-	
+	  @billboard_title ="Cakes"	
 	erb :cakes
-	
 end
+
 get('/cookies')  do
-	@billboard_title  ="Cookies"
-	
+	@billboard_title  ="Cookies"	
 	erb :cookies
 end
 
 get('/muffins')  do
-	@billboard_title ="Muffins"
-	
+	@billboard_title ="Muffins"	
 	erb :muffins
 end
 
 get('/contact')  do
-	@billboard_title ="Contact"
-	
+	@billboard_title ="Contact"	
 	erb :contact
 end
 
@@ -90,15 +82,13 @@ post('/flyer')  do
 
 	p params
 
-	@f_name = params[:first_name]
+	f_name = params[:first_name]
 	l_name = params[:last_name]
 	e_mail = params[:e_mail]
 
 	mg_client = Mailgun::Client.new(ENV['MAILGUN_API_KEY'])
 
-	# let request = require('request');
 
-	# let file = request("https://media.giphy.com/media/l0HUg6Ypas42ubkXu/giphy.gif");
 
 	message_params =  {
 			                from: 'alfonsoarriolajr@gmail.com',
@@ -109,44 +99,22 @@ post('/flyer')  do
 
                                   Please check out our fine goods below <br>
 
-
-                                  <link rel="stylesheet" href="/" />
-
-                                
-
-                                 
-
-
-
-
-		                      '
-		                     
-
+                                 <link rel="stylesheet" href="/" />'
+		                    
 		                  }
 
 
    mg_client.send_message(ENV['MAILGUN_API_DOMAIN'], message_params)
-
-
    redirect '/thank_you'
    
-
-	
-	# erb :contact
 end
 
 get('/thank_you')  do
 	@billboard_title ="Success!"
-	
-	
-	erb :thank_you
+		erb :thank_you
 end
 
 
-
-# get('/username')  do
-# 	"Username: #{@user}"
-# end
 
 
 	
