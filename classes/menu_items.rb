@@ -32,6 +32,8 @@ class Muffin
 	end
 end
 
+
+# please delete commented out code before submitting
 # class Shopping_cart
 # 	attr_accessor :
 # 	def initialize(array)

@@ -37,6 +37,11 @@ before do
 end
 
 
+# Let's change these to be arrays and then loop through the array in
+# erb so
+# before do
+# 	@cookies = [Cookie.new(...), Cookie.new(...), Cookie.new(...)]
+# end
 before do
 	@pb_cookie = Cookie.new("Peanut Butter", 2.75)
 end
@@ -51,14 +56,12 @@ end
 
 
 
-
 get('/')  do
-	"I'm alive!"
    erb :index, :layout =>false
 end
 
 get('/cakes')  do
-	  @billboard_title ="Cakes"	
+	@billboard_title ="Cakes"	
 	erb :cakes
 end
 
@@ -80,7 +83,7 @@ end
 post('/flyer')  do
 	@billboard_title ="Contact"
 
-	p params
+	p params # do not leave this in your code before submitting.
 
 	f_name = params[:first_name]
 	l_name = params[:last_name]
@@ -91,7 +94,7 @@ post('/flyer')  do
 
 
 	message_params =  {
-			                from: 'alfonsoarriolajr@gmail.com',
+			                from: 'alfonsoarriolajr@gmail.com', # you probably don't want your email address on the web al.
 		                    to:   "#{e_mail}",
 		                    subject: 'Do You Smell What The Sweet Spot is Baking?!',
 
@@ -111,7 +114,7 @@ end
 
 get('/thank_you')  do
 	@billboard_title ="Success!"
-		erb :thank_you
+	erb :thank_you
 end
 
 

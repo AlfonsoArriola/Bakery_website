@@ -4,17 +4,16 @@ body{
 }
 
 video {
-    width: 100vw    !important;
-    height: auto   !important;
+    width: 100vw    !important; /* you want to avoid using !important */
+    height: auto   !important; /* you want to avoid using !important */
     z-index: 0;
 }
 
 
 .overlay {
-    position: absolute !important;
+    position: absolute !important; /* you want to avoid using !important */
     top:50px;
     left: 30px;
-    font-family:
     z-index: 1;
     font-size: 2.2em;
     padding-left: 3rem;
@@ -28,6 +27,8 @@ video {
     text-shadow: 2px 2px white;
 }
 
+
+/* Please remove this commented out code. */
 /*.hero_menu {
     float: right;
     height: 5rem;
@@ -73,6 +74,8 @@ a:active {
     text-decoration: underline;
 }
 
+
+/* you can remove these if they're empty */
 @media only screen and (max-width: 966px) {
    
 }
