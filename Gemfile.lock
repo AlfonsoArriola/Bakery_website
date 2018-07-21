@@ -3,6 +3,7 @@ GEM
   specs:
     domain_name (0.5.20180417)
       unf (>= 0.0.5, < 1.0.0)
+    heroku (3.99.3)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
     mailgun-ruby (1.1.9)
@@ -33,8 +34,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  heroku
   mailgun-ruby (~> 1.1.6)
   sinatra
 
+RUBY VERSION
+   ruby 2.2.3p173
+
 BUNDLED WITH
-   1.16.2
+   1.16.3
