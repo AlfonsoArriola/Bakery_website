@@ -1,5 +1,5 @@
 body{
-	background-color: lightblue;
+	background-color: black;
     margin: 0 auto;
 }
 
@@ -13,8 +13,7 @@ video {
 .overlay {
     position: absolute !important;
     top:50px;
-    left: 30px;
-    font-family:
+    left: 30px;  
     z-index: 1;
     font-size: 2.2em;
     padding-left: 3rem;
@@ -62,7 +61,7 @@ a:link {
 
 a:visited {
     text-decoration: none;
-    color: brown;
+    color: orange;
 }
 
 a:hover {
@@ -73,29 +72,67 @@ a:active {
     text-decoration: underline;
 }
 
-@media only screen and (max-width: 966px) {
-   
+
+
+
+@media only screen and (max-width: 1250px) {
+   .overlay {
+    font-size: 1.8em;
+   }
+    .overlay h1 {
+    float: left;
+    }
+   .hero_menu2 {
+    float: right;
+    padding: 11rem;
+
+   }
 }
 
 
-
-
-
 @media only screen and (max-width: 966px) {
-   
-
     video{
         display: none;
     }
-}
 
-@media only screen and (max-width: 450px) {
-   .overlay h1{
+    body{
+        background-image: url(images/close_up_cake_1.jpg);
+        background-repeat: no-repeat; 
+        background-color: white;
+    }
+
+    .overlay h1{
     font-size: 2em;
     font-family: 'Modak', cursive;
     color: brown;
     text-shadow: 2px 2px white;
+
+    }
+
+     .hero_menu2 {
+    float: right;
+    padding: 7rem;
+
+   }
 }
+
+@media only screen and (max-width: 450px) {
+   .overlay h1{
+    font-size: 1.7em;
+    font-family: 'Modak', cursive;
+    color: brown;
+    text-shadow: 2px 2px white;
+    }
+
+    .hero_menu2 {
+    font-size: 1em;
+   }
+    body{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: black;
+  }
+  
 }
 
 
