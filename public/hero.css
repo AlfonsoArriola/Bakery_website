@@ -105,7 +105,7 @@ a:active {
     font-size: 2em;
     font-family: 'Modak', cursive;
     color: brown;
-    text-shadow: 2px 2px white;
+    text-shadow: 2px 2px lightblue;
 
     }
 
@@ -118,10 +118,10 @@ a:active {
 
 @media only screen and (max-width: 450px) {
    .overlay h1{
-    font-size: 1.7em;
+    font-size: 1.5em;
     font-family: 'Modak', cursive;
     color: brown;
-    text-shadow: 2px 2px white;
+    text-shadow: 2px 2px orange;
     }
 
     .hero_menu2 {
