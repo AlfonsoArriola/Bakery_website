@@ -85,7 +85,11 @@ footer{
 }
 
 
-.lil_nav{
+.lil_navs{
+  display: none;
+}
+
+.nav_mobile{
   display: none;
 }
 
@@ -121,13 +125,21 @@ iframe{
 
 
 @media only screen and (max-width: 606px) {
-   .big_nav{
+  .big_nav{
     display: none;
    }
 
-.lil_nav{
-  display: visible;
+  .lil_navs{
+  display: block;
 }
+
+  .go_logo {
+  float: right;
+  font-family: 'Modak', cursive;
+  font-size: 1.6em;
+  padding-right: .5rem;
+}
+
 
   .billboard{
     border : 4px solid white;
