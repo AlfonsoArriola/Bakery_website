@@ -1,5 +1,9 @@
 require "sinatra"
 require 'mailgun'
+require 'mailgun-ruby'
+require './cookies'
+require './cakes'
+require './muffins'
 
 
 Dir[settings.root + "/classes/*.rb"].each{|file| require file}
