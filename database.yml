@@ -1,0 +1,3 @@
+production:
+<<: *defaults
+url: ENV['DATABASE_URL']

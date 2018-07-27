@@ -5,6 +5,8 @@ require 'mailgun'
 Dir[settings.root + "/classes/*.rb"].each{|file| require file}
 
 
+
+
 before do
 	@user = User.new
 	@user.username = "guest"

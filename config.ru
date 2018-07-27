@@ -1,2 +1,3 @@
-require './app' # for app.ruby file
+
+require'./app'
 run Sinatra::Application
