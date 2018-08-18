@@ -11,5 +11,5 @@
 
       
       
-![alt text](https://raw.githubusercontent.com/AlfonsoArriola/read_me_images/master/cherrybomb.jpg)    
+![alt text](https://raw.githubusercontent.com/AlfonsoArriola/read_me_images/master/bakery.jpg)    
       
